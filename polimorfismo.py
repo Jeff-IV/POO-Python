@@ -1,0 +1,1 @@
+#duck typing, enlaces dinamicos, enlaces estaticos, tipo real, tipo declarado
