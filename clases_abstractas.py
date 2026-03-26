@@ -1,15 +1,17 @@
 #las clases abstractas no pueden ser instanciadas como un objeto, son como una plantilla para otras clases que quieran heredarla
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractclassmethod, classmethod
 
 class Persona(ABC):
-    @abstractclassmethod
+    #@abstractclassmethod #Ahora en las nuevas versiones de python no se usa este decorador
+    @classmethod
     def __init__(self,nombre,edad,sexo,actividad):
         self.nombre = nombre
         self.edad = edad
         self.sexo = sexo
         self.actividad = actividad
         
-    @abstractclassmethod
+    #@abstractclassmethod #Ahora en las nuevas versiones de python no se usa este decorador
+    @classmethod
     def hacer_actividad(self):
         pass
     

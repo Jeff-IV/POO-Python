@@ -1,5 +1,16 @@
 class Personaje:
-    def __init__(self,nombre,poder):
+    """
+    Representa un Personaje para un juego de fusion
+    
+    Attributes:
+        nombre (str): representa el nombre del personaje
+        poder (str): representa el poder o ataque especial del personaje
+        
+    Methods:
+        __str__: retorna un string con una representacion del personaje
+        __add__: recibe un personaje y retorna un objeto Personaje con la fusion entre ambos
+    """
+    def __init__(self, nombre: str, poder: str):
         self.nombre = nombre
         self.poder = poder 
         
@@ -10,8 +21,9 @@ class Personaje:
             nuevo_poder = "super " + self.poder + " with " + otro.poder
             return Personaje(self.nombre[0:3] + otro.nombre[3:],nuevo_poder)
         
+        
 class Personaje2:
-    def __init__(self,nombre,fuerza,velocidad,vida):
+    def __init__(self, nombre: str, fuerza: float, velocidad: float, vida: int):
         self.nombre = nombre
         self.velocidad = velocidad
         self.fuerza = fuerza
