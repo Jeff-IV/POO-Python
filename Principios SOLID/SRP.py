@@ -1,3 +1,6 @@
+# Single Responsibility Principle (SRP): Una clase debe tener una única razón para cambiar
+# Idea clave: cada clase debe encargarse de una sola responsabilidad.
+
 class GasolinaDisponible:
     def __init__(self):
         self.gasolina = 100

@@ -1,21 +1,30 @@
-from abc import ABC, abstractmethod
+# Interface Segregation Principle (ISP): no obligues a una clase a implementar métodos que no usa
+# Idea clave: interfaces pequeñas y específicas > interfaces grandes
+
+from abc import ABC #, abstractmethod
 class Trabajador(ABC):
     
-    @abstractmethod
+    #@abstractmethod #decorador obsoleto
+    @classmethod
     def trabajar(self):
         pass
 
+
 class Comelon(ABC):
     
-    @abstractmethod
+    #@abstractmethod #decorador obsoleto
+    @classmethod
     def comer(self):
         pass
 
+
 class Dormilon(ABC):
     
-    @abstractmethod
+    #@abstractmethod #decorador obsoleto
+    @classmethod
     def dormir(self):
         pass
+    
     
 class Humano(Trabajador,Dormilon,Comelon):
     def comer(self):
@@ -27,13 +36,14 @@ class Humano(Trabajador,Dormilon,Comelon):
     def dormir(self):
         print("El humano está durmiendo")
         
+        
 class Robot(Trabajador):
     def trabajar(self):
         print("el robot está trabajando")
         
 robot = Robot()
 robot.trabajar()
-humano =  Humano()
+humano = Humano()
 humano.comer()
 humano.trabajar()
 humano.dormir()
